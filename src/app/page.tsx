@@ -1,4 +1,4 @@
-import { Navbar } from '@/components/Navbar';
+import { Navbar } from '@/layout/Navbar';
 import Image from 'next/image';
 import HomeBg from '@/assets/home-bg.jpeg';
 

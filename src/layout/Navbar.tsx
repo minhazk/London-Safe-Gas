@@ -71,7 +71,7 @@ export function Navbar({ transparent }: NavBarProps) {
             <div className={`hidden items-center ${!transparent ? 'md:bg-gray-50 xl:bg-transparent' : 'bg-unset'} md:flex justify-center xl:justify-start order-3 xl:order-1 col-span-2 xl:col-span-1`}>
                 <ul className={`hidden md:flex gap-6 xl:gap-3 ${transparent ? 'text-white' : 'text-gray-500'} font-semibold text-sm`}>
                     {pagesLinks.map(({ name, url }) => (
-                        <li key={url}>
+                        <li key={name}>
                             <Link href={`/${url}`} className={`${transparent ? 'py-3' : 'py-6'} px-4 block`}>
                                 {name}
                             </Link>
