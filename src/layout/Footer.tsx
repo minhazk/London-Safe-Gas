@@ -3,7 +3,7 @@ import { RxInstagramLogo } from 'react-icons/rx';
 
 export function Footer() {
     return (
-        <div className='mb-12 px-10 grid justify-center text-left grid-cols-2 md:grid-cols-[1fr_auto_auto] gap-8 items-center md:w-[90vw] max-w-[13600px] mx-auto'>
+        <div className='mb-16 mt-8 px-10 grid justify-center text-left grid-cols-2 md:grid-cols-[1fr_auto_auto] gap-8 items-center md:w-[90vw] max-w-[1360px] mx-auto'>
             <div>
                 <p className='text-primary font-bold text-md'>London Safe Gas</p>
                 <p className='text-gray-400 font-medium text-xs my-2'>020 1234 4567</p>
