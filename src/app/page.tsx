@@ -5,7 +5,6 @@ import HomeBg from '@/assets/home-bg.jpeg';
 export default function Home() {
     return (
         <>
-            {/* <Navbar /> */}
             <div className='relative rounded-b-lg'>
                 <div className='absolute inset-0 -z-10'>
                     <Image src={HomeBg} alt='Plumber working' className='h-full object-cover' />
