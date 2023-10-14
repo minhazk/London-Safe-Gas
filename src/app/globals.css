@@ -11,3 +11,7 @@
 body {
     margin: 0;
 }
+
+section:not(.full-w) {
+    @apply w-[85vw] mx-auto max-w-7xl;
+}

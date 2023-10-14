@@ -36,7 +36,7 @@ type NavBarProps = {
 
 export function Navbar({ transparent }: NavBarProps) {
     return (
-        <div className={`grid grid-cols-1 md:grid-cols-[1fr_auto] xl:grid-cols-[auto_1fr_auto] gap-y-0 gap-x-4 max-w-[1536px] mx-auto ${transparent ? 'text-white' : 'text-black'}`}>
+        <nav className={`grid grid-cols-1 md:grid-cols-[1fr_auto] xl:grid-cols-[auto_1fr_auto] gap-y-0 gap-x-4 max-w-[1536px] mx-auto ${transparent ? 'text-white' : 'text-black'}`}>
             <div className='py-2 px-4 mt-2 mb-3 max-w-md mx-auto w-full flex items-center gap-4 md:order-2 md:pr-20 xl:px-10 whitespace-nowrap'>
                 <div className='flex items-center gap-6 w-full'>
                     <Phone className={transparent ? 'text-secondary' : 'text-primary'} size={28} strokeWidth={1} />
@@ -79,6 +79,6 @@ export function Navbar({ transparent }: NavBarProps) {
                     ))}
                 </ul>
             </div>
-        </div>
+        </nav>
     );
 }
