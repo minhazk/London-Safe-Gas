@@ -56,7 +56,7 @@ export default function Home() {
                 <div className='bg-black/80'>
                     <Navbar transparent />
                 </div>
-                <div className='bg-black/80 pt-10 pb-20 px-10 h-full text-white text-center flex flex-col items-center gap-5'>
+                <div className='bg-black/80 pt-2 md:pt-6 xl:pt-4 pb-20 px-10 h-full text-white text-center flex flex-col items-center gap-5'>
                     <h1 className='text-xl sm:text-3xl font-bold max-w-lg'>London Safe Gas and Plumbing at your service</h1>
                     <p className='text-gray-300 text-xs md:text-sm'>Get in touch today for our expert plumbing solutions</p>
                     <h2 className='text-xl font-semibold'>
@@ -69,7 +69,7 @@ export default function Home() {
 
             <section className='shadow-lg rounded-xl py-8 px-5 md:px-10 text-center -mt-8 bg-white relative'>
                 <h2 className='text-primary text-2xl font-bold'>Why choose us</h2>
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 my-10'>
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 xl:gap-2 my-10'>
                     {cards.map(card => (
                         <Card key={card.title} {...card} />
                     ))}
@@ -81,11 +81,11 @@ export default function Home() {
                     <div className='md:w-1/2'>
                         <h2 className='text-sm text-gray-400 font-bold uppercase ml-2'>About Us</h2>
                         <h3 className='text-xl font-bold mt-1 mb-4'>We are London Safe Gas</h3>
-                        <p className='text-gray-500 text-xs md:text-sm mb-2'>
+                        <p className='text-gray-500 font-semibold text-xs md:text-sm mb-2'>
                             With over 20 years of dedicated experience and expertise in the field, we take immense pride in offering dependable plumbing, heating, and gas services to our valued
                             customers all over London.
                         </p>
-                        <p className='text-gray-500 text-xs md:text-sm'>
+                        <p className='text-gray-500 font-semibold text-xs md:text-sm'>
                             With our competitive pricing and a dedication to ensuring customer contentment, we are the preferred choice for both local residents and businesses seeking plumbing
                             services in the vicinity. Rely on our extensive expertise, as we are a certified Gas Safe registered company with enhanced DBS checks in place.
                         </p>
@@ -118,7 +118,7 @@ function Card({ title, icon: Icon, description }: CardProps) {
         <div className='grid grid-rows-[auto_minmax(0,_1fr)_minmax(0,_1fr)] gap-2 items-center justify-center'>
             <div className='text-sm md:text-md lg:text-lg font-semibold whitespace-nowrap'>{title}</div>
             <Icon size={38} strokeWidth={1} className='mx-auto' />
-            <div className='text-gray-500 text-xs self-start max-w-[175px]'>{description}</div>
+            <div className='text-gray-500 text-xs self-start max-w-[175px] xl:max-w-[250px] xl:mt-2'>{description}</div>
         </div>
     );
 }

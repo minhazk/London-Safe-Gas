@@ -1,5 +1,6 @@
 import { Phone, Clock5, Menu } from 'lucide-react';
 import BlueLogo from '@/assets/LSG logo blue.png';
+import WhiteLogo from '@/assets/LSG logo white.png';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -65,7 +66,7 @@ export function Navbar({ transparent }: NavBarProps) {
                 <button className='absolute left-6 top-1/2 -translate-y-1/2 p-2 rounded-full md:hidden'>
                     <Menu size={30} className='text-gray-500' />
                 </button>
-                <Image src={transparent ? BlueLogo : BlueLogo} alt='London Safe Gas logo' className='h-16 w-auto min-w-max' />
+                <Image src={transparent ? WhiteLogo : BlueLogo} alt='London Safe Gas logo' className='h-16 w-auto min-w-max' />
             </div>
 
             <div className={`hidden items-center ${!transparent ? 'md:bg-gray-50 xl:bg-transparent' : 'bg-unset'} md:flex justify-center xl:justify-start order-3 xl:order-1 col-span-2 xl:col-span-1`}>
