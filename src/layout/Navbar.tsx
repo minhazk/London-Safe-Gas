@@ -71,8 +71,15 @@ export function Navbar({ transparent }: NavBarProps) {
             <div className={`hidden items-center ${!transparent ? 'md:bg-gray-50 xl:bg-transparent' : 'bg-unset'} md:flex justify-center xl:justify-start order-3 xl:order-1 col-span-2 xl:col-span-1`}>
                 <ul className={`hidden md:flex gap-6 xl:gap-3 ${transparent ? 'text-white' : 'text-gray-500'} font-semibold text-sm`}>
                     {pagesLinks.map(({ name, url }) => (
-                        <li key={name}>
-                            <Link href={`/${url}`} className={`${transparent ? 'py-3' : 'py-6'} px-4 block`}>
+                        <li key={name} className={`xl:py-2`}>
+                            <Link
+                                href={`/${url}`}
+                                className={`${
+                                    transparent
+                                        ? 'py-3'
+                                        : 'py-6 xl:p-4 md:hover:bg-primary/90 md:hover:text-white xl:hover:bg-transparent xl:hover:text-gray-500 after:absolute after:bg-primary/50 after:h-px after:w-0 xl:hover:after:w-full after:bottom-0 after:left-0 after:right-0 after:mx-auto after:transition-all after:duration-300'
+                                } px-4 block xl:rounded-md transition-colours relative`}
+                            >
                                 {name}
                             </Link>
                         </li>
