@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Clouds from '@/assets/blue-sky-bg.jpg';
 import { ComponentProps } from 'react';
+import { SectionBlue } from '@/layout/CustomSection';
 
 type ContactFormProps = {
     title: string;
@@ -9,33 +10,29 @@ type ContactFormProps = {
 
 export function ContactForm({ title, subtitle }: ContactFormProps) {
     return (
-        <div className='text-center'>
-            <p className='text-primary text-lg font-bold'>{title}</p>
-            {subtitle && <p className='text-gray-400/90 text-xs md:text-sm mt-2 px-10'>{subtitle}</p>}
+        <SectionBlue>
+            <SectionBlue.title>
+                <p className='text-primary text-lg font-bold text-center'>{title}</p>
+                {subtitle && <p className='text-gray-400/90 text-xs md:text-sm mt-2 px-10 text-center'>{subtitle}</p>}
+            </SectionBlue.title>
+            <SectionBlue.content>
+                <form className='w-[85vw] mx-auto max-w-4xl grid gap-5 md:grid-cols-2'>
+                    <Input label='First Name' placeholder='First Name, Surname' name='name' />
+                    <Input label='Contact Number' placeholder='020123456789' name='number' type='number' />
+                    <div className='col-span-full'>
+                        <Input label='Email Address' placeholder='example@server.com' name='email' type='email' />
+                    </div>
+                    <div className='col-span-full'>
+                        <Input label='Service' placeholder='Plumbing' name='service' />
+                    </div>
+                    <div className='col-span-full'>
+                        <Input label="Details about the issue you're having" textarea name='body' placeholder='Describe what you are experience, when it happens, etc...' />
+                    </div>
 
-            <div className='relative my-8'>
-                <div className='absolute inset-0 -z-10'>
-                    <Image src={Clouds} alt='clouds' className='h-full object-cover' />
-                </div>
-                <div className='bg-primary/90'>
-                    <form className='py-10 w-[85vw] mx-auto max-w-4xl grid gap-5 md:grid-cols-2'>
-                        <Input label='First Name' placeholder='First Name, Surname' name='name' />
-                        <Input label='Contact Number' placeholder='020123456789' name='number' type='number' />
-                        <div className='col-span-full'>
-                            <Input label='Email Address' placeholder='example@server.com' name='email' type='email' />
-                        </div>
-                        <div className='col-span-full'>
-                            <Input label='Service' placeholder='Plumbing' name='service' />
-                        </div>
-                        <div className='col-span-full'>
-                            <Input label="Details about the issue you're having" textarea name='body' placeholder='Describe what you are experience, when it happens, etc...' />
-                        </div>
-
-                        <button className='text-white text-xs uppercase font-semibold py-3 px-8 mt-3 rounded-md bg-secondary w-fit mx-auto col-span-full'>Send Booking Request</button>
-                    </form>
-                </div>
-            </div>
-        </div>
+                    <button className='text-white text-xs uppercase font-semibold py-3 px-8 mt-3 rounded-md bg-secondary w-fit mx-auto col-span-full'>Send Booking Request</button>
+                </form>
+            </SectionBlue.content>
+        </SectionBlue>
     );
 }
 

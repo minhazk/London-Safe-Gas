@@ -16,3 +16,7 @@ section:not(.full-w),
 .section-width {
     @apply w-[85vw] mx-auto max-w-7xl xl:max-w-[1450px];
 }
+
+.paragraph {
+    @apply text-gray-500 text-xs md:text-sm;
+}

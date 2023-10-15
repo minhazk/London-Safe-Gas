@@ -64,9 +64,11 @@ export function Navbar({ transparent }: NavBarProps) {
 
             <div className={`relative ${!transparent ? 'bg-gray-50' : 'bg-unset'} py-4 px-4 flex justify-center items-center md:justify-start md:bg-transparent md:pl-20 xl:px-10 whitespace-nowrap`}>
                 <button className='absolute left-6 top-1/2 -translate-y-1/2 p-2 rounded-full md:hidden'>
-                    <Menu size={30} className='text-gray-500' />
+                    <Menu size={30} className={transparent ? 'text-white' : 'text-gray-500'} />
                 </button>
-                <Image src={transparent ? WhiteLogo : BlueLogo} alt='London Safe Gas logo' className='h-16 w-auto min-w-max' />
+                <Link href='/'>
+                    <Image src={transparent ? WhiteLogo : BlueLogo} alt='London Safe Gas logo' className='h-16 w-auto min-w-max' />
+                </Link>
             </div>
 
             <div className={`hidden items-center ${!transparent ? 'md:bg-gray-50 xl:bg-transparent' : 'bg-unset'} md:flex justify-center xl:justify-start order-3 xl:order-1 col-span-2 xl:col-span-1`}>

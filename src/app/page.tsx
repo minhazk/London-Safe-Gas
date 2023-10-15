@@ -81,11 +81,11 @@ export default function Home() {
                     <div className='md:w-1/2'>
                         <h2 className='text-sm text-gray-400 font-bold uppercase ml-2'>About Us</h2>
                         <h3 className='text-xl font-bold mt-1 mb-4'>We are London Safe Gas</h3>
-                        <p className='text-gray-500 font-semibold text-xs md:text-sm mb-2'>
+                        <p className='paragraph font-semibold'>
                             With over 20 years of dedicated experience and expertise in the field, we take immense pride in offering dependable plumbing, heating, and gas services to our valued
                             customers all over London.
                         </p>
-                        <p className='text-gray-500 font-semibold text-xs md:text-sm'>
+                        <p className='paragraph font-semibold'>
                             With our competitive pricing and a dedication to ensuring customer contentment, we are the preferred choice for both local residents and businesses seeking plumbing
                             services in the vicinity. Rely on our extensive expertise, as we are a certified Gas Safe registered company with enhanced DBS checks in place.
                         </p>

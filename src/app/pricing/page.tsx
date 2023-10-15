@@ -38,11 +38,11 @@ const paymentMethods = [
     },
     {
         image: Credit,
-        name: 'Cash',
+        name: 'Credit/Debit',
     },
     {
         image: Bank,
-        name: 'Cash',
+        name: 'BankTransfer',
     },
 ];
 
@@ -79,7 +79,7 @@ export default function Pricing() {
 
                 <div className='grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-5 mt-10'>
                     {paymentMethods.map(method => (
-                        <CircleCard key={method.name} {...method} />
+                        <PaymentCard key={method.name} {...method} />
                     ))}
                 </div>
             </section>
@@ -151,12 +151,12 @@ function PriceTable({ title, subtitle, domestic, weekend }: PriceTableProps) {
     );
 }
 
-type CircleCardProps = {
+type PaymentCardProps = {
     image: StaticImageData;
     name: string;
 };
 
-function CircleCard({ image, name }: CircleCardProps) {
+export function PaymentCard({ image, name }: PaymentCardProps) {
     return (
         <div>
             <div className='rounded-full aspect-square overflow-hidden border-4 border-primary p-1 w-48 md:w-3/5 max-w-[200px] mx-auto relative before:absolute before:inset-0 before:bg-primary/20'>
