@@ -156,7 +156,7 @@ type PaymentCardProps = {
     name: string;
 };
 
-export function PaymentCard({ image, name }: PaymentCardProps) {
+function PaymentCard({ image, name }: PaymentCardProps) {
     return (
         <div>
             <div className='rounded-full aspect-square overflow-hidden border-4 border-primary p-1 w-48 md:w-3/5 max-w-[200px] mx-auto relative before:absolute before:inset-0 before:bg-primary/20'>
