@@ -80,14 +80,14 @@ export default function Pricing() {
                 <p className='font-bold md:text-lg'>Payment</p>
                 <p className='text-gray-400 font-medium text-xs md:text-sm mt-1'>Payment must be made prior to the issuance of the electronic certificate. We accept payment through:</p>
 
-                <div className='flex items-center justify-center gap-8 my-8 font-semibold px-2 md:px-12 max-w-3xl mx-auto'>
-                    <div className='w-full'>
+                <div className='flex items-center justify-center gap-8 md:gap-16 lg:gap-24 my-8 font-semibold px-2 md:px-12 max-w-3xl mx-auto'>
+                    <div>
                         <div className='rounded-full aspect-square border-4 border-primary p-1 mx-auto'>
                             <Image src={Credit} className='w-full aspect-square object-cover rounded-full max-w-[200px]' alt='business icon' />
                         </div>
                         <p className='text-gray-500 text-sm sm:text-md text-center mt-6 md:mt-8 px-5 whitespace-nowrap'>Credit/Debit</p>
                     </div>
-                    <div className='w-full'>
+                    <div>
                         <div className='rounded-full aspect-square border-4 border-primary p-1 mx-auto'>
                             <Image src={Bank} className='w-full aspect-square object-cover rounded-full max-w-[200px]' alt='business icon' />
                         </div>
