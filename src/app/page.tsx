@@ -23,7 +23,9 @@ export default function Home() {
                         Call now on <span className='text-secondary'>{contactNumber}</span>
                     </h2>
                     <p className='text-gray-300 text-xs'>or</p>
-                    <button className='bg-primary py-2 px-7 uppercase font-semibold rounded-md'>Book Now</button>
+                    <a href={`tel:${contactNumber}`} className='bg-primary py-2 px-7 uppercase font-semibold rounded-md'>
+                        Book Now
+                    </a>
                 </div>
             </div>
 
