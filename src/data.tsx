@@ -10,7 +10,7 @@ import { BiLogoFacebook, BiLogoTwitter } from 'react-icons/bi';
 
 // company info
 
-export const contactNumber = '020 1234 5678';
+export const contactNumber = '020 1234 567';
 export const address = {
     road: '123 Business Road',
     region: 'Surrey PST CDE',
