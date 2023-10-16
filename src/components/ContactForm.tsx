@@ -1,6 +1,6 @@
-import Image from 'next/image';
-import Clouds from '@/assets/blue-sky-bg.jpg';
-import { ComponentProps } from 'react';
+'use client';
+
+import { ComponentProps, FormEvent, useState } from 'react';
 import { SectionBlue } from '@/layout/CustomSection';
 
 type ContactFormProps = {
@@ -9,6 +9,44 @@ type ContactFormProps = {
 };
 
 export function ContactForm({ title, subtitle }: ContactFormProps) {
+    const [isLoading, setIsLoading] = useState(false);
+
+    const handleSubmit = async (e: FormEvent) => {
+        e.preventDefault();
+        const form = e.target as HTMLFormElement;
+        const formData = new FormData(form);
+        const name = formData.get('name') as string;
+        const number = formData.get('number') as string;
+        const email = formData.get('email') as string;
+        const service = formData.get('service') as string;
+        const body = formData.get('body') as string;
+        if (!name || !email || !number || !service || !body) return alert('Please fill in all fields');
+        const message = `
+        Client Name: ${name}
+        Contact number: ${number}
+        Email: ${email}
+        Service: ${service}\n
+        
+        Message: ${body}
+        `;
+        console.log(email, message);
+        setIsLoading(true);
+        const res = await fetch('/api/mail', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ body: message }),
+        });
+        if (res.ok) {
+            form.reset();
+            alert('Email sent!');
+        } else {
+            alert('There was an error sending your email');
+        }
+        setIsLoading(false);
+    };
+
     return (
         <SectionBlue>
             <SectionBlue.title>
@@ -16,20 +54,22 @@ export function ContactForm({ title, subtitle }: ContactFormProps) {
                 {subtitle && <p className='text-gray-400/90 text-xs md:text-sm mt-2 px-10 text-center'>{subtitle}</p>}
             </SectionBlue.title>
             <SectionBlue.content>
-                <form className='w-[85vw] mx-auto max-w-4xl grid gap-5 md:grid-cols-2'>
-                    <Input label='First Name' placeholder='First Name, Surname' name='name' />
-                    <Input label='Contact Number' placeholder='020123456789' name='number' type='number' />
+                <form onSubmit={handleSubmit} className='w-[85vw] mx-auto max-w-4xl grid gap-5 md:grid-cols-2'>
+                    <Input label='First Name' placeholder='First Name, Surname' name='name' required />
+                    <Input label='Contact Number' placeholder='020123456789' name='number' required type='number' />
                     <div className='col-span-full'>
-                        <Input label='Email Address' placeholder='example@server.com' name='email' type='email' />
+                        <Input label='Email Address' placeholder='example@server.com' name='email' required type='email' />
                     </div>
                     <div className='col-span-full'>
-                        <Input label='Service' placeholder='Plumbing' name='service' />
+                        <Input label='Service' placeholder='Plumbing' name='service' required />
                     </div>
                     <div className='col-span-full'>
-                        <Input label="Details about the issue you're having" textarea name='body' placeholder='Describe what you are experience, when it happens, etc...' />
+                        <Input label="Details about the issue you're having" textarea name='body' required placeholder='Describe what you are experience, when it happens, etc...' />
                     </div>
 
-                    <button className='text-white text-xs uppercase font-semibold py-3 px-8 mt-3 rounded-md bg-secondary w-fit mx-auto col-span-full'>Send Booking Request</button>
+                    <button className={`text-white text-xs uppercase font-semibold py-3 px-8 mt-3 rounded-md bg-secondary w-fit mx-auto col-span-full ${isLoading && 'opacity-50'} transition-opacity`}>
+                        Send Booking Request
+                    </button>
                 </form>
             </SectionBlue.content>
         </SectionBlue>
