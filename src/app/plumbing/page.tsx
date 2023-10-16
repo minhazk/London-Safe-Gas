@@ -2,34 +2,7 @@ import { Navbar } from '@/layout/Navbar';
 import Plumbing from '@/assets/plumbing-main.jpeg';
 import { ImageHeader } from '@/components/ImageHeader';
 import { SectionLight } from '@/layout/CustomSection';
-
-const plumbingServices = [
-    'Fixing dripping taps',
-    'Clearing blockages in traps and waste pipes',
-    'Resolving toilet blockages',
-    'Installing showers',
-    'Installing pumps',
-    'Installing baths',
-    'Addressing leaking showers',
-    'Addressing slow-draining sinks',
-    'Eliminating kitchen sink odors',
-    'Repairing toilet cistern leaks',
-    'Fixing faulty electric showers',
-    'Repairing leaks in pipework',
-    'Clearing blockages in rainwater gutters and downpipes',
-    'Bathroom and kitchen installations',
-    'Rerouting pipework',
-    'Thawing frozen pipes',
-    'Addressing sewage odors',
-    'Adjusting water pressure (low or high)',
-    'Quieting noisy or banging pipework',
-    'Appliance installation and removal',
-    'Installing extractor fans and hoods',
-    'Testing and commissioning services',
-    'Controls and wiring adjustments',
-    'Power flushing',
-    'Central heating system installation and repairs',
-];
+import { contactNumber, plumbingServices } from '@/data';
 
 export default function Pricing() {
     return (
@@ -48,7 +21,7 @@ export default function Pricing() {
                 </p>
                 <p className='text-white text-xs my-6 bg-primary p-4 rounded-md text-center'>
                     Rest assured, our services are delivered with safety as a top priority, and all our engineers are Gas Safe Registered. For all your emergency plumbing needs, don&apos;t hesitate to
-                    contact us at <span className='text-secondary font-semibold text-sm ml-1'>0734567890</span>
+                    contact us at <span className='text-secondary font-semibold text-sm ml-1'>{contactNumber}</span>
                 </p>
             </section>
 

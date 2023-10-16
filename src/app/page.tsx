@@ -2,49 +2,9 @@ import { Navbar } from '@/layout/Navbar';
 import Image, { StaticImageData } from 'next/image';
 import HomeBg from '@/assets/home-bg.jpeg';
 import AboutImg from '@/assets/about-us.jpeg';
-import Business from '@/assets/business.jpg';
-import HandShake from '@/assets/handshake.jpg';
-import LightBulb from '@/assets/lightbulb.jpg';
-import { CalendarCheck, BadgePoundSterling, TimerReset, LucideIcon, HeartHandshake } from 'lucide-react';
+import { LucideIcon } from 'lucide-react';
 import { ContactForm } from '@/components/ContactForm';
-
-const cards = [
-    {
-        title: '24/7 Availability',
-        icon: CalendarCheck,
-        description: 'Our call centre is always open to assist you with any property save',
-    },
-    {
-        title: 'Affordable Pricing',
-        icon: BadgePoundSterling,
-        description: 'Our call centre is always open to assist you with any property',
-    },
-    {
-        title: '24h Response Time',
-        icon: TimerReset,
-        description: 'Our call centre is always open to assist you with any property',
-    },
-    {
-        title: 'Efficient Solutions',
-        icon: HeartHandshake,
-        description: 'Count on us for quick and efficient solutions to your property needs.',
-    },
-];
-
-const circleCards = [
-    {
-        image: Business,
-        description: 'Our commitment to delivering has earned us trust',
-    },
-    {
-        image: HandShake,
-        description: 'Our skilled team ensures prompt assistance',
-    },
-    {
-        image: LightBulb,
-        description: 'We offer reliable solutions for any issue',
-    },
-];
+import { contactNumber, coreValuesCards, sellingPointCards } from '@/data';
 
 export default function Home() {
     return (
@@ -60,7 +20,7 @@ export default function Home() {
                     <h1 className='text-xl sm:text-3xl font-bold max-w-lg'>London Safe Gas and Plumbing at your service</h1>
                     <p className='text-gray-300 text-xs md:text-sm'>Get in touch today for our expert plumbing solutions</p>
                     <h2 className='text-xl font-semibold'>
-                        Call now on <span className='text-secondary'>020 1234 5678</span>
+                        Call now on <span className='text-secondary'>{contactNumber}</span>
                     </h2>
                     <p className='text-gray-300 text-xs'>or</p>
                     <button className='bg-primary py-2 px-7 uppercase font-semibold rounded-md'>Book Now</button>
@@ -70,7 +30,7 @@ export default function Home() {
             <section className='shadow-lg rounded-xl py-8 px-5 md:px-10 text-center -mt-8 bg-white z-00 relative'>
                 <h2 className='text-primary text-2xl font-bold'>Why choose us</h2>
                 <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 xl:gap-2 my-10'>
-                    {cards.map(card => (
+                    {sellingPointCards.map(card => (
                         <Card key={card.title} {...card} />
                     ))}
                 </div>
@@ -97,7 +57,7 @@ export default function Home() {
             </div>
 
             <section className='grid grid-rows-3 md:grid-rows-1 md:grid-cols-3 gap-8 mt-10 mb-16'>
-                {circleCards.map(card => (
+                {coreValuesCards.map(card => (
                     <CircleCard key={card.description} {...card} />
                 ))}
             </section>
@@ -131,7 +91,7 @@ type CircleCardProps = {
 function CircleCard({ image, description }: CircleCardProps) {
     return (
         <div>
-            <div className='rounded-full aspect-square overflow-hidden border-4 border-primary p-1 w-48 md:w-3/5 max-w-[200px] mx-auto relative before:absolute before:inset-0 before:bg-primary/20'>
+            <div className='rounded-full aspect-square border-4 border-primary p-1 w-48 md:w-3/5 max-w-[200px] mx-auto'>
                 <Image src={image} className='w-full h-full object-cover rounded-full' alt='business icon' />
             </div>
             <p className='text-gray-500 text-sm sm:text-md text-center mt-8 px-5'>{description}</p>

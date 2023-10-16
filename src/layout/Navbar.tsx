@@ -6,6 +6,7 @@ import WhiteLogo from '@/assets/LSG logo white.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
+import { address, contactNumber } from '@/data';
 
 const pagesLinks = [
     {
@@ -54,11 +55,11 @@ export function Navbar({ transparent }: NavBarProps) {
                 <div className='flex items-center gap-6 w-full'>
                     <Phone className={transparent ? 'text-secondary' : 'text-primary'} size={28} strokeWidth={1} />
                     <div>
-                        <p className='font-bold text-sm'>+44 123456789</p>
+                        <p className='font-bold text-sm'>{contactNumber}</p>
                         <p className={`${transparent ? 'text-gray-300/80' : 'text-gray-400'} font-medium text-xs`}>
-                            123 Business Road
+                            {address.road}
                             <br />
-                            Surrey, PST CDE
+                            {address.region}
                         </p>
                     </div>
                 </div>
@@ -130,7 +131,7 @@ export function Navbar({ transparent }: NavBarProps) {
                         <li className='px-12 py-8 mt-5 relative before:absolute before:top-0 before:w-3/4 before:h-px before:bg-gray-400/50 before:left-1/2 before:-translate-x-1/2'>
                             <p className='text-xs uppercase font-bold text-gray-700'>Contact us</p>
                             <p className='text-gray-400 font-normal text-xs mt-3'>
-                                For your boiler service and repair needs, please do not hesitate to contact us at 0734567890. Your comfort and peace of mind are our top priorities.
+                                For your boiler service and repair needs, please do not hesitate to contact us at {contactNumber}. Your comfort and peace of mind are our top priorities.
                             </p>
                         </li>
                     )}

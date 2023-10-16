@@ -3,25 +3,7 @@ import { Navbar } from '@/layout/Navbar';
 import PowerFlushing from '@/assets/power-flushing-main.jpeg';
 import { SectionBlue, SectionLight } from '@/layout/CustomSection';
 import { ContactForm } from '@/components/ContactForm';
-
-const powerFlushPrices = [
-    ['up to 6', 290],
-    ['7 - 8', 350],
-    ['9 - 10', 410],
-    ['11 - 12', 470],
-    ['13 - 14', 530],
-    ['14 - 16', 590],
-    ['17 - 18', 650],
-    ['19 - 20', 700],
-];
-
-const powerFlushingTerms = [
-    'Each individual cylinder is considered equivalent to a single radiator.',
-    'Every flow and return valve associated with the underfloor heating system will be counted as one radiator',
-    'Any valves that require replacement will be included in the overall cost.',
-    'The heating system and isolation valves must be operational.',
-    'All radiators, radiator valves, and the boiler must be free from any obstructions.',
-];
+import { powerFlushPrices, powerFlushingTerms } from '@/data';
 
 export default function page() {
     return (
@@ -33,7 +15,7 @@ export default function page() {
             <section className='flex flex-col gap-4'>
                 <p className='paragraph'>
                     Receive a complimentary quote for the MagnaCleanse system to flush your central heating system. When you hear disruptive banging and kettling sounds, experience lukewarm water,
-                    observe leaks, notice a drop in boiler pressure, or find yourself frequently adjusting the thermostat, these might indicate the presence of stubborn sludge buildup in your
+                    observe leaks, notice a drop in boiler pressure, or find yourself frequently adjusting the thermostat, these might indicate the presence of stubborn sludge build up in your
                     radiators.
                 </p>
 
