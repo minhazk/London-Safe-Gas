@@ -61,10 +61,10 @@ export default function page() {
                     </div>
 
                     <p className='text-white'>Chemical flush radiators from:</p>
-                    <div className='grid grid-cols-2 md:grid-cols-4 gap-5 place-items-center mt-7'>
+                    <div className='grid grid-cols-2 md:grid-cols-4 gap-y-5 gap-x-16 place-items-end mt-7 w-max mx-auto'>
                         {powerFlushPrices.slice(1).map(([label, price]) => (
                             <div key={label} className='font-semibold text-sm flex items-center gap-4'>
-                                <p className='text-white'>{label}</p>
+                                <p className='text-white whitespace-nowrap'>{label}</p>
                                 <p className='bg-white text-primary p-1 rounded-md'>£{price}</p>
                             </div>
                         ))}
