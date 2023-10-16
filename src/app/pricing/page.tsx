@@ -99,8 +99,8 @@ type PaymentCardProps = {
 function PaymentCard({ image, name }: PaymentCardProps) {
     return (
         <div>
-            <div className='rounded-full aspect-square overflow-hidden border-4 border-primary p-1 w-48 md:w-3/5 max-w-[200px] mx-auto relative before:absolute before:inset-0 before:bg-primary/20'>
-                <Image src={image} className='w-full h-full object-cover rounded-full' alt='business icon' />
+            <div className='rounded-full aspect-square border-4 border-primary p-1 w-48 md:w-3/5 max-w-[200px] mx-auto'>
+                <Image src={image} className='w-full aspect-square object-cover rounded-full' alt='business icon' />
             </div>
             <p className='text-md sm:text-lg text-center font-bold mt-8 px-5'>{name}</p>
         </div>
