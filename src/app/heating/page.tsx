@@ -82,14 +82,14 @@ export default function Pricing() {
 
                 <div className='flex items-center justify-center gap-8 my-8 font-semibold px-2 md:px-12 max-w-3xl mx-auto'>
                     <div className='w-full'>
-                        <div className='rounded-full aspect-square border-4 border-primary p-1 max-w-[200px] mx-auto'>
-                            <Image src={Credit} className='w-full h-full object-cover rounded-full' alt='business icon' />
+                        <div className='rounded-full aspect-square border-4 border-primary p-1 mx-auto'>
+                            <Image src={Credit} className='w-full h-full object-cover rounded-full max-w-[200px]' alt='business icon' />
                         </div>
                         <p className='text-gray-500 text-sm sm:text-md text-center mt-6 md:mt-8 px-5 whitespace-nowrap'>Credit/Debit</p>
                     </div>
                     <div className='w-full'>
-                        <div className='rounded-full aspect-square border-4 border-primary p-1 max-w-[200px] mx-auto'>
-                            <Image src={Bank} className='w-full h-full object-cover rounded-full' alt='business icon' />
+                        <div className='rounded-full aspect-square border-4 border-primary p-1 mx-auto'>
+                            <Image src={Bank} className='w-full h-full object-cover rounded-full max-w-[200px]' alt='business icon' />
                         </div>
                         <p className='text-gray-500 text-sm sm:text-md text-center mt-6 md:mt-8 px-5 whitespace-nowrap'>Bank Transfer</p>
                     </div>

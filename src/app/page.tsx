@@ -91,8 +91,8 @@ type CircleCardProps = {
 function CircleCard({ image, description }: CircleCardProps) {
     return (
         <div>
-            <div className='rounded-full aspect-square border-4 border-primary p-1 w-48 md:w-3/5 max-w-[200px] mx-auto'>
-                <Image src={image} className='w-full h-full object-cover rounded-full' alt='business icon' />
+            <div className='rounded-full aspect-square border-4 border-primary p-1 mx-auto'>
+                <Image src={image} className='h-full object-cover rounded-full w-48 md:w-3/5 max-w-[200px]' alt='business icon' />
             </div>
             <p className='text-gray-500 text-sm sm:text-md text-center mt-8 px-5'>{description}</p>
         </div>
