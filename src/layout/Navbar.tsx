@@ -21,15 +21,15 @@ const pagesLinks = [
         url: 'plumbing',
     },
     {
+        name: 'Power Flushing',
+        url: 'power-flushing',
+    },
+    {
         name: 'Prices',
         url: 'pricing',
     },
     {
         name: 'Contact',
-        url: 'contact',
-    },
-    {
-        name: 'Book Online',
         url: 'contact',
     },
 ];
