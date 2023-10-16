@@ -49,14 +49,14 @@ const circleCards = [
 export default function Home() {
     return (
         <>
-            <div className='relative rounded-b-lg z-0'>
-                <div className='absolute inset-0 -z-10'>
+            <div className='relative rounded-b-lg'>
+                <div className='absolute inset-0 -z-10 pointer-events-none'>
                     <Image src={HomeBg} alt='Plumber working' className='h-full w-full object-cover' />
                 </div>
                 <div className='bg-black/80'>
                     <Navbar transparent />
                 </div>
-                <div className='bg-black/80 pt-2 md:pt-6 xl:pt-4 pb-20 px-10 h-full text-white text-center flex flex-col items-center gap-5'>
+                <div className='bg-black/80 pt-2 md:pt-6 xl:pt-4 pb-20 px-10 h-full text-white text-center flex flex-col items-center gap-5 z-20'>
                     <h1 className='text-xl sm:text-3xl font-bold max-w-lg'>London Safe Gas and Plumbing at your service</h1>
                     <p className='text-gray-300 text-xs md:text-sm'>Get in touch today for our expert plumbing solutions</p>
                     <h2 className='text-xl font-semibold'>
@@ -67,7 +67,7 @@ export default function Home() {
                 </div>
             </div>
 
-            <section className='shadow-lg rounded-xl py-8 px-5 md:px-10 text-center -mt-8 bg-white relative'>
+            <section className='shadow-lg rounded-xl py-8 px-5 md:px-10 text-center -mt-8 bg-white z-00 relative'>
                 <h2 className='text-primary text-2xl font-bold'>Why choose us</h2>
                 <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 xl:gap-2 my-10'>
                     {cards.map(card => (
