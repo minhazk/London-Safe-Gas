@@ -51,8 +51,8 @@ export function Navbar({ transparent }: NavBarProps) {
 
     return (
         <nav className={`grid grid-cols-1 md:grid-cols-[1fr_auto] xl:grid-cols-[auto_1fr_auto] gap-y-0 gap-x-4 max-w-[1536px] mx-auto ${transparent ? 'text-white' : 'text-black'}`}>
-            <div className='py-2 px-4 mt-2 mb-3 max-w-md mx-auto w-full flex items-center gap-4 md:order-2 md:pr-20 xl:px-10 whitespace-nowrap'>
-                <div className='flex items-center gap-6 w-full'>
+            <div className='py-2 px-4 mt-2 mb-3 max-w-md mx-auto w-full flex items-center justify-center gap-3 sm:gap-4 md:order-2 md:pr-20 xl:px-10 whitespace-nowrap'>
+                <div className='flex items-center justify-center gap-4 sm:gap-6 w-full'>
                     <Phone className={transparent ? 'text-secondary' : 'text-primary'} size={28} strokeWidth={1} />
                     <div>
                         <p className='font-bold text-sm'>{contactNumber}</p>
@@ -63,7 +63,7 @@ export function Navbar({ transparent }: NavBarProps) {
                         </p>
                     </div>
                 </div>
-                <div className='flex items-center gap-6 w-full'>
+                <div className='flex items-center justify-center gap-4 sm:gap-6 w-full'>
                     <Clock5 className={transparent ? 'text-secondary' : 'text-primary'} size={28} strokeWidth={1} />
                     <div>
                         <p className='font-bold text-sm'>Working Hours</p>
