@@ -17,7 +17,7 @@ export default function Home() {
                     <Navbar transparent />
                 </div>
                 <div className='bg-black/80 pt-2 md:pt-6 xl:pt-4 pb-20 px-10 h-full text-white text-center flex flex-col items-center gap-5 z-20'>
-                    <h1 className='text-xl sm:text-3xl font-bold max-w-lg'>London Safe Gas and Plumbing at your service</h1>
+                    <h1 className='text-2xl sm:text-4xl font-bold max-w-lg'>London Safe Gas</h1>
                     <p className='text-gray-300 text-xs md:text-sm'>Get in touch today for our expert plumbing solutions</p>
                     <h2 className='text-xl font-semibold'>
                         Call now on <span className='text-secondary'>{contactNumber}</span>
@@ -29,9 +29,10 @@ export default function Home() {
                 </div>
             </div>
 
-            <section className='shadow-lg rounded-xl py-8 px-5 md:px-10 text-center -mt-8 bg-white z-00 relative'>
-                <h2 className='text-primary text-2xl font-bold'>Why choose us</h2>
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 xl:gap-2 my-10'>
+            <section className='full-w max-w-[85vw] w-[1200px] mx-auto shadow-lg rounded-xl py-8 px-5 md:px-10 text-center -mt-8 bg-white z-00 relative'>
+                <h2 className='text-2xl font-bold'>Why choose us</h2>
+                <p className='text-xs md:text-sm text-gray-400 mt-1'>Discover What Sets Us Apart</p>
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 xl:gap-2 my-8 md:my-10'>
                     {sellingPointCards.map(card => (
                         <Card key={card.title} {...card} />
                     ))}
@@ -72,15 +73,13 @@ export default function Home() {
 type CardProps = {
     title: string;
     icon: LucideIcon;
-    description: string;
 };
 
-function Card({ title, icon: Icon, description }: CardProps) {
+function Card({ title, icon: Icon }: CardProps) {
     return (
-        <div className='grid grid-rows-[auto_minmax(0,_1fr)_minmax(0,_1fr)] gap-2 items-center justify-center'>
-            <div className='text-sm md:text-md lg:text-lg font-semibold whitespace-nowrap'>{title}</div>
-            <Icon size={38} strokeWidth={1} className='mx-auto' />
-            <div className='text-gray-500 text-xs self-start max-w-[175px] xl:max-w-[250px] xl:mt-2'>{description}</div>
+        <div className='grid grid-rows-[minmax(0,_1fr)_auto] gap-5 items-center justify-center'>
+            <Icon size={45} strokeWidth={2} className='mx-auto' />
+            <div className='text-xs md:text-md lg:text-lg font-semibold whitespace-nowrap texts-primary'>{title}</div>
         </div>
     );
 }

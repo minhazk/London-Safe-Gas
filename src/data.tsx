@@ -5,35 +5,20 @@ import Cash from '@/assets/cash.jpg';
 import Credit from '@/assets/card-payment.jpg';
 import Bank from '@/assets/bank-transfer.jpg';
 import { CalendarCheck, BadgePoundSterling, TimerReset, HeartHandshake } from 'lucide-react';
-import { RxInstagramLogo } from 'react-icons/rx';
-import { BiLogoFacebook, BiLogoTwitter } from 'react-icons/bi';
 
 // company info
 
-export const contactNumber = '020 1234 567';
+export const contactNumber = '+44 7939 249039';
+export const contactEmail = 'Enquires@londonsafegas.co.uk';
 export const address = {
-    road: '123 Business Road',
-    region: 'Surrey PST CDE',
+    road: '27 Dartmouth road',
+    region: 'Hendon NW4 3JA',
 };
-
-// social links
-export const socialLinks = [
-    {
-        name: 'Instagram',
-        Icon: RxInstagramLogo,
-        link: '/',
-    },
-    {
-        name: 'Twitter',
-        Icon: BiLogoTwitter,
-        link: '/',
-    },
-    {
-        name: 'Facebook',
-        Icon: BiLogoFacebook,
-        link: '/',
-    },
-];
+export const gasRegNumber = '198664';
+export const workingHours = {
+    days: 'Everyday',
+    times: '7 am - 8 pm',
+};
 
 /// home page
 export const sellingPointCards = [
@@ -208,8 +193,7 @@ export const gasCertificateTerms = [
     {
         title: 'No Shows:',
         description: [
-            'If there is a no',
-            'show, the engineer will wait at the property for 30 minutes from the booking time. If no contact is made during this period, the booking will be considered canceled, and no refund will be issued.',
+            'If there is a no show, the engineer will wait at the property for 30 minutes from the booking time. If no contact is made during this period, the booking will be considered canceled, and no refund will be issued.',
         ],
     },
     {
@@ -271,7 +255,7 @@ export const pricing = [
         },
     },
     {
-        title: 'Domestic Gas and heating ',
+        title: 'Standard Gas and heating ',
         subtitle: 'gas/heating rates/ blocked secondary drains (per hour ex VAT)',
         domestic: {
             day: 90,

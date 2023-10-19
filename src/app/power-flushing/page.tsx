@@ -4,6 +4,8 @@ import PowerFlushing from '@/assets/power-flushing-main.jpeg';
 import { SectionBlue, SectionLight } from '@/layout/CustomSection';
 import { ContactForm } from '@/components/ContactForm';
 import { powerFlushPrices, powerFlushingTerms } from '@/data';
+import magnaPro from '@/assets/magnaclean professional.png';
+import Image from 'next/image';
 
 export default function page() {
     return (
@@ -12,7 +14,7 @@ export default function page() {
 
             <ImageHeader title='Power Flushing' image={PowerFlushing} />
 
-            <section className='flex flex-col gap-4'>
+            <section className='flex flex-col gap-4 mb-10'>
                 <p className='paragraph'>
                     Receive a complimentary quote for the MagnaCleanse system to flush your central heating system. When you hear disruptive banging and kettling sounds, experience lukewarm water,
                     observe leaks, notice a drop in boiler pressure, or find yourself frequently adjusting the thermostat, these might indicate the presence of stubborn sludge build up in your
@@ -21,16 +23,21 @@ export default function page() {
 
                 <p className=' text-primary font-bold text-sm md:text-base'>Why you should power flush you systems</p>
 
-                <p className='paragraph'>
-                    Sludge accumulates due to corrosion within radiators, pipes, and soldered joints. This not only impacts the heating system&#39;s performance but also hampers energy efficiency,
-                    hindering heat transfer, and causing blockages in radiators and pipes. As a result, water flow is restricted, leading to increased energy bills.
-                </p>
-                <p className='paragraph'>
-                    To effectively address this issue, flushing the entire system with chemicals and employing specialized filters ensures the removal of even stubborn debris that may have built up
-                    over time. While filters can capture floating debris within the system, a heavily sludged heating system might still harbor corrosion in the radiator and pipework, which filters
-                    alone cannot remove. To dislodge firmly settled magnetite and rust, it&#39;s es sential to introduce a cleaner into the system, allowing it to circulate and dislodge sludge w ithin
-                    the pipework and radiators.
-                </p>
+                <div className='grid grid-cols-1 grid-rows-[auto_auto_auto] md:grid-cols-[minmax(50vw,_1fr)_auto] md:grid-rows-[auto_auto] gap-y-8 md:gap-y-0 md:gap-x-16'>
+                    <p className='paragraph'>
+                        Sludge accumulates due to corrosion within radiators, pipes, and soldered joints. This not only impacts the heating system&#39;s performance but also hampers energy efficiency,
+                        hindering heat transfer, and causing blockages in radiators and pipes. As a result, water flow is restricted, leading to increased energy bills.
+                    </p>
+                    <p className='paragraph order-last md:order-2 md:mt-8'>
+                        To effectively address this issue, flushing the entire system with chemicals and employing specialized filters ensures the removal of even stubborn debris that may have built
+                        up over time. While filters can capture floating debris within the system, a heavily sludged heating system might still harbor corrosion in the radiator and pipework, which
+                        filters alone cannot remove. To dislodge firmly settled magnetite and rust, it&#39;s es sential to introduce a cleaner into the system, allowing it to circulate and dislodge
+                        sludge w ithin the pipework and radiators.
+                    </p>
+                    <div className='md:row-span-2 h-full flex justify-center'>
+                        <Image src={magnaPro} className='w-auto h-56' alt='power flushing tool magnacleaner professional' />
+                    </div>
+                </div>
             </section>
 
             <SectionBlue>

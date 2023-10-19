@@ -75,8 +75,8 @@ function PriceTable({ title, subtitle, domestic, weekend }: PriceTableProps) {
                 </p>
                 <div className='col-span-full border-t border-primary/20 h-px rounded w-5/6 mx-auto' />
                 <div className='col-span-full md:col-span-1 mb-3 mt-8 md:my-6'>
-                    <div className='bg-primary text-white text-md py-1 px-3 rounded w-fit mx-auto'>Domestic</div>
-                    <p className='text-gray-500 font-medium text-sm mt-3 md:mt-2'>Monday - Friday</p>
+                    <div className='bg-primary text-white text-md py-1 px-3 rounded w-fit mx-auto'>Weekend</div>
+                    <p className='text-gray-500 font-medium text-sm mt-3 md:mt-2'>Saturday - Sunday</p>
                 </div>
                 <p className='font-bold text-md md:hidden'>8 AM - 8 PM</p>
                 <p className='font-bold text-md md:hidden'>8 PM - 12 PM</p>

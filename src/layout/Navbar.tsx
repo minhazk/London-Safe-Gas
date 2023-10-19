@@ -6,7 +6,7 @@ import WhiteLogo from '@/assets/LSG logo white.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { address, contactNumber } from '@/data';
+import { address, contactNumber, workingHours } from '@/data';
 
 const pagesLinks = [
     {
@@ -66,10 +66,11 @@ export function Navbar({ transparent }: NavBarProps) {
                 <div className='flex items-center gap-6 w-full'>
                     <Clock5 className={transparent ? 'text-secondary' : 'text-primary'} size={28} strokeWidth={1} />
                     <div>
-                        <p className='font-bold text-sm'>Hours</p>
+                        <p className='font-bold text-sm'>Working Hours</p>
                         <p className={`${transparent ? 'text-gray-300/80' : 'text-gray-400'} font-medium text-xs`}>
-                            Monday - Saturday
-                            <br />8 am - 5 pm
+                            {workingHours.days}
+                            <br />
+                            {workingHours.times}
                         </p>
                     </div>
                 </div>

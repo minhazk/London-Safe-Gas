@@ -12,12 +12,12 @@ export default function Pricing() {
             <ImageHeader title='Plumbing' image={Plumbing} />
 
             <section>
+                <p className='font-semibold text-sm md:text-base mb-5 text-center'>In need of dependable plumbing or heating services? Look no further!</p>
                 <p className='paragraph'>
-                    In need of dependable plumbing or heating services? Look no further! Our team of highly experienced technicians is ready to provide prompt assistance for a wide range of issues,
-                    whether it&apos;s a troublesome leaking pipe or a heating system breakdown. We pride ourselves on our precise diagnostics and our commitment to delivering secure and efficient
-                    solutions. At our company, transparency is key, and you can find a clear breakdown of our charges on our website, ensuring complete transparency in our pricing. We also specialize
-                    in comprehensive insurance work for central heating system failures, general plumbing emergencies, and related services. Count on us to ensure your property operates at peak
-                    performance.
+                    Our team of highly experienced technicians is ready to provide prompt assistance for a wide range of issues, whether it&apos;s a troublesome leaking pipe or a heating system
+                    breakdown. We pride ourselves on our precise diagnostics and our commitment to delivering secure and efficient solutions. At our company, transparency is key, and you can find a
+                    clear breakdown of our charges on our website, ensuring complete transparency in our pricing. We also specialize in comprehensive insurance work for central heating system
+                    failures, general plumbing emergencies, and related services. Count on us to ensure your property operates at peak performance.
                 </p>
                 <p className='text-white text-xs my-6 bg-primary p-4 rounded-md text-center'>
                     Rest assured, our services are delivered with safety as a top priority, and all our engineers are Gas Safe Registered. For all your emergency plumbing needs, don&apos;t hesitate to
