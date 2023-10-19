@@ -32,7 +32,7 @@ export default function Home() {
             <section className='full-w max-w-[85vw] w-[1200px] mx-auto shadow-lg rounded-xl py-8 px-5 md:px-10 text-center -mt-8 bg-white z-00 relative'>
                 <h2 className='text-2xl font-bold'>Why choose us</h2>
                 <p className='text-xs md:text-sm text-gray-400 mt-1'>Discover What Sets Us Apart</p>
-                <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 xl:gap-2 my-8 md:my-10'>
+                <div className='grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-10 xl:gap-2 mt-8 lg:mt-10 mb-5'>
                     {sellingPointCards.map(card => (
                         <Card key={card.title} {...card} />
                     ))}
@@ -79,7 +79,7 @@ function Card({ title, icon: Icon }: CardProps) {
     return (
         <div className='grid grid-rows-[minmax(0,_1fr)_auto] gap-5 items-center justify-center'>
             <Icon size={45} strokeWidth={2} className='mx-auto' />
-            <div className='text-xs md:text-md lg:text-lg font-semibold whitespace-nowrap texts-primary'>{title}</div>
+            <div className='text-sm md:text-md lg:text-lg font-semibold whitespace-nowrap texts-primary'>{title}</div>
         </div>
     );
 }

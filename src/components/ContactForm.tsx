@@ -22,12 +22,11 @@ export function ContactForm({ title, subtitle }: ContactFormProps) {
         const body = formData.get('body') as string;
         if (!name || !email || !number || !service || !body) return alert('Please fill in all fields');
         const message = `
-        Client Name: ${name}
-        Contact number: ${number}
-        Email: ${email}
-        Service: ${service}\n
-        
-        Message: ${body}
+        <p><span style="font-weight:bold">Client Name: </span> ${name}:</p>
+        <p><span style="font-weight:bold">Contact Number: </span>  ${number}:</p>
+        <p><span style="font-weight:bold">Email: </span> ${email}:</p>
+        <p><span style="font-weight:bold">Service: </span> ${service}</p>
+        <p><span style="font-weight:bold">Message:</span> ${body}</p>
         `;
         console.log(email, message);
         setIsLoading(true);

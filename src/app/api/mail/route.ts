@@ -20,8 +20,9 @@ export async function POST(req: Request) {
         await transporter.sendMail({
             from: email,
             to: email,
-            subject: 'London Safe Gas Client Mail',
-            text: body,
+            subject: 'Client Mail - London Safe Gas',
+            html: body,
+            // text: body,
         });
         return new Response('Email sent', { status: 200 });
     } catch (e) {
