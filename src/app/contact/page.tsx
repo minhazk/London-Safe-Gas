@@ -1,5 +1,5 @@
 import { ContactForm } from '@/components/ContactForm';
-import { contactNumber } from '@/data';
+import { address, contactNumber } from '@/data';
 import { Navbar } from '@/layout/Navbar';
 
 export default function Pricing() {
@@ -17,9 +17,9 @@ export default function Pricing() {
                     <p className='text-md my-2 text-secondary font-semibold'>{contactNumber}</p>
 
                     <p className='text-sm text-gray-500'>
-                        123 Business Road
+                        {address.road}
                         <br />
-                        Surrey, PST CDE
+                        {address.region}
                         <br />
                         London, UK
                     </p>

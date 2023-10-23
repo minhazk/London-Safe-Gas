@@ -117,12 +117,11 @@ export function Navbar({ transparent }: NavBarProps) {
                                 href={`/${url}`}
                                 className={`${isBurgerOpen ? 'hover:bg-gray-100 px-12' : 'px-4'}
                                 ${
-                                    transparent && !isBurgerOpen
-                                        ? 'py-3'
-                                        : isBurgerOpen
+                                    transparent || isBurgerOpen
                                         ? 'py-3'
                                         : 'py-6 xl:p-4 md:hover:bg-primary/90 md:hover:text-white xl:hover:bg-transparent xl:hover:text-gray-500 after:absolute after:bg-primary/50 after:h-px after:w-0 xl:hover:after:w-full after:bottom-0 after:left-0 after:right-0 after:mx-auto after:transition-all after:duration-300'
-                                } block xl:rounded-md transition-colours relative`}
+                                } ${transparent && 'hover:bg-gray-50/10 transition-colors duration-300'}
+                                block xl:rounded-md transition-colours relative`}
                             >
                                 {name}
                             </Link>

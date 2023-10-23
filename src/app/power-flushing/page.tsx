@@ -46,7 +46,7 @@ export default function page() {
 
                     <div className='font-semibold text-sm flex items-center gap-4 my-5'>
                         <p className='text-white'>Chemical flush {powerFlushPrices[0][0]} radiators:</p>
-                        <p className='bg-white text-primary p-1 rounded-md'>£{powerFlushPrices[0][1]}</p>
+                        <p className='bg-white text-primary p-1 font-bold rounded-md'>£{powerFlushPrices[0][1]}</p>
                     </div>
 
                     <p className='text-white'>Chemical flush radiators from:</p>
@@ -54,7 +54,7 @@ export default function page() {
                         {powerFlushPrices.slice(1).map(([label, price]) => (
                             <div key={label} className='font-semibold text-sm flex items-center gap-4'>
                                 <p className='text-white whitespace-nowrap'>{label}</p>
-                                <p className='bg-white text-primary p-1 rounded-md'>£{price}</p>
+                                <p className='bg-white text-primary font-bold p-1 rounded-md'>£{price}</p>
                             </div>
                         ))}
                     </div>
