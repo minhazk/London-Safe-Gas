@@ -21,7 +21,7 @@ export default function page() {
                     radiators.
                 </p>
 
-                <p className=' text-primary font-bold text-sm md:text-base'>Why you should power flush you systems</p>
+                <p className=' text-primary font-bold text-sm md:text-base'>Why you should power flush your systems</p>
 
                 <div className='grid grid-cols-1 grid-rows-[auto_auto_auto] md:grid-cols-[1fr_auto] md:grid-rows-[auto_auto] gap-y-8 md:gap-y-0 md:gap-x-16'>
                     <p className='paragraph'>

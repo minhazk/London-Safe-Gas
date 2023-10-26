@@ -9,6 +9,7 @@ import { CalendarCheck, BadgePoundSterling, TimerReset, HeartHandshake } from 'l
 // company info
 
 export const contactNumber = '+44 7939 249039';
+export const landlineNumber = '02082035775';
 export const contactEmail = 'Enquires@londonsafegas.co.uk';
 export const address = {
     road: '27 Dartmouth road',
@@ -17,10 +18,11 @@ export const address = {
 export const gasRegNumber = '198664';
 export const workingHours = {
     days: 'Everyday',
-    times: '7 am - 8 pm',
+    times: '8 am - 6 pm',
 };
 
 /// home page
+
 export const sellingPointCards = [
     {
         title: '24/7 Availability',

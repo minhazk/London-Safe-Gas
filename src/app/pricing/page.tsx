@@ -61,8 +61,8 @@ function PriceTable({ title, subtitle, domestic, weekend }: PriceTableProps) {
 
             <div className='text-center my-7 grid grid-cols-2 md:grid-cols-3 justify-center items-center'>
                 <div className='col-span-full md:col-span-1' />
-                <p className='font-bold text-md'>8 AM - 8 PM</p>
-                <p className='font-bold text-md'>8 PM - 12 PM</p>
+                <p className='font-bold text-md'>8 AM - 6 PM</p>
+                <p className='font-bold text-md'>6 PM - 12 PM</p>
                 <div className='col-span-full md:col-span-1 order-first md:order-none mb-3 md:my-6'>
                     <div className='bg-primary text-white text-md py-1 px-3 rounded w-fit mx-auto'>Domestic</div>
                     <p className='text-gray-500 font-medium text-sm mt-3 md:mt-2'>Monday - Friday</p>
@@ -78,8 +78,8 @@ function PriceTable({ title, subtitle, domestic, weekend }: PriceTableProps) {
                     <div className='bg-primary text-white text-md py-1 px-3 rounded w-fit mx-auto'>Weekend</div>
                     <p className='text-gray-500 font-medium text-sm mt-3 md:mt-2'>Saturday - Sunday</p>
                 </div>
-                <p className='font-bold text-md md:hidden'>8 AM - 8 PM</p>
-                <p className='font-bold text-md md:hidden'>8 PM - 12 PM</p>
+                <p className='font-bold text-md md:hidden'>8 AM - 6 PM</p>
+                <p className='font-bold text-md md:hidden'>6 PM - 12 PM</p>
                 <p className='text-primary text-2xl font-semibold mt-4 md:mt-0'>
                     £<span className='text-5xl md:text-6xl'>{weekend.day}</span>
                 </p>
