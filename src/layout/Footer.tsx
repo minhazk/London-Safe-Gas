@@ -38,9 +38,9 @@ export function Footer() {
                 <p className='font-medium whitespace-nowrap'>{new Date().getFullYear()} © All Rights Reserved</p>
             </div>
 
-            <div className='flex flex-col items-center gap-2.5 sm:gap-4 lg:gap-3 xl:gap-4 text-gray-400 text-xs xl:text-sm h-full sm:col-span-full lg:col-span-1'>
+            <div className='flex flex-col items-center gap-3 sm:gap-3.5 lg:gap-3 xl:gap-4 text-gray-400 text-xs xl:text-sm h-full sm:col-span-full lg:col-span-1'>
                 <p className='text-primary font-bold uppercase'>Get in touch</p>
-                <div className='flex gap-4 items-center'>
+                <div className='flex gap-4 sm:gap-5 lg:gap-4 items-center'>
                     <a
                         href='https://www.facebook.com/profile.php?id=61552428013531'
                         className='rounded-full bg-blue-50 text-primary p-3 hover:bg-primary hover:text-white transition-colors'
