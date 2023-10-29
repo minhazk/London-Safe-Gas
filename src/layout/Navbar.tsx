@@ -1,12 +1,13 @@
 'use client';
 
-import { Phone, Clock5, Menu, X } from 'lucide-react';
+import { Phone, Menu, X, Clock } from 'lucide-react';
 import BlueLogo from '@/assets/LSG logo blue.png';
 import WhiteLogo from '@/assets/LSG logo white.png';
 import Image from 'next/image';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
 import { address, contactNumber, workingHours } from '@/data';
+import Clouds from '@/assets/blue-sky-bg.jpg';
 
 const pagesLinks = [
     {
@@ -51,26 +52,25 @@ export function Navbar({ transparent }: NavBarProps) {
 
     return (
         <nav className={`grid grid-cols-1 md:grid-cols-[1fr_auto] xl:grid-cols-[auto_1fr_auto] gap-y-0 gap-x-4 max-w-[1536px] mx-auto ${transparent ? 'text-white' : 'text-black'}`}>
-            <div className='py-2 px-4 mt-2 mb-3 max-w-md mx-auto w-full flex items-center justify-center gap-3 sm:gap-4 md:order-2 md:pr-20 xl:px-10 whitespace-nowrap'>
-                <div className='flex items-center justify-center gap-4 sm:gap-6 w-full'>
-                    <Phone className={transparent ? 'text-secondary' : 'text-primary'} size={28} strokeWidth={1} />
+            <div className='py-2 px-4 mt-2 mb-3 max-w-md mx-auto w-full flex items-center justify-center gap-1.5 sm:gap-4 md:order-2 md:pr-20 xl:px-10 whitespace-nowrap'>
+                <div className={`${transparent ? 'bg-gray-50/10 rounded-md py-3' : 'bg-transparent rounded py-0'} px-4 w-full h-full flex items-center gap-4`}>
+                    <div>
+                        <Clock className={transparent ? 'text-secondary' : 'text-primary'} size={28} strokeWidth={1.5} />
+                    </div>
+                    <div>
+                        <p className={`${transparent ? 'text-white' : 'text-black'} font-bold text-sm`}>24 HOURS &</p>
+                        <p className={`${transparent ? 'text-gray-300' : 'text-primary'} text-sm font-bold uppercase`}>Emergencies</p>
+                    </div>
+                </div>
+
+                <div className='flex items-center justify-center gap-4 sm:gap-6 w-full h-full'>
+                    <Phone className={transparent ? 'text-secondary' : 'text-primary'} size={28} strokeWidth={1.5} />
                     <div>
                         <p className='font-bold text-sm'>{contactNumber}</p>
                         <p className={`${transparent ? 'text-gray-300/80' : 'text-gray-400'} font-medium text-xs`}>
                             {address.road}
                             <br />
                             {address.region}
-                        </p>
-                    </div>
-                </div>
-                <div className='flex items-center justify-center gap-4 sm:gap-6 w-full'>
-                    <Clock5 className={transparent ? 'text-secondary' : 'text-primary'} size={28} strokeWidth={1} />
-                    <div>
-                        <p className='font-bold text-sm'>Working Hours</p>
-                        <p className={`${transparent ? 'text-gray-300/80' : 'text-gray-400'} font-medium text-xs`}>
-                            {workingHours.days}
-                            <br />
-                            {workingHours.times}
                         </p>
                     </div>
                 </div>

@@ -252,20 +252,20 @@ export const pricing = [
             night: 100,
         },
         weekend: {
-            day: 100,
-            night: 110,
+            day: 130,
+            night: 130,
         },
     },
     {
         title: 'Standard Gas and heating ',
         subtitle: 'gas/heating rates/ blocked secondary drains (per hour ex VAT)',
         domestic: {
-            day: 90,
+            day: 80,
             night: 110,
         },
         weekend: {
-            day: 110,
-            night: 120,
+            day: 130,
+            night: 150,
         },
     },
 ];
