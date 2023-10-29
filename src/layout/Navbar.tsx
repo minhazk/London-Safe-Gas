@@ -53,7 +53,7 @@ export function Navbar({ transparent }: NavBarProps) {
     return (
         <nav className={`grid grid-cols-1 md:grid-cols-[1fr_auto] xl:grid-cols-[auto_1fr_auto] gap-y-0 gap-x-4 max-w-[1536px] mx-auto ${transparent ? 'text-white' : 'text-black'}`}>
             <div className='py-2 px-4 mt-2 mb-3 max-w-md mx-auto w-full flex items-center justify-center gap-1.5 sm:gap-4 md:order-2 md:pr-20 xl:px-10 whitespace-nowrap'>
-                <div className={`${transparent ? 'bg-gray-50/10 rounded-md py-3' : 'bg-transparent rounded py-0'} px-4 w-full h-full flex items-center gap-4`}>
+                <div className={`${transparent ? 'bg-gray-50/10 rounded-md py-3' : 'bg-transparent rounded py-0'} px-4 sm:pl-7 sm:pr-8 w-full h-full flex items-center gap-4`}>
                     <div>
                         <Clock className={transparent ? 'text-secondary' : 'text-primary'} size={28} strokeWidth={1.5} />
                     </div>
