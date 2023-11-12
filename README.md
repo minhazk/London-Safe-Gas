@@ -57,3 +57,7 @@ Start the development server with the following command:
    ```
 
 This will launch the project locally, and you can access it in your web browser at http://localhost:3000.
+
+## License
+
+This project is licensed under the [GNU General Public License v3.0](LICENSE.md). See the [LICENSE.md](LICENSE.md) file for the full text of the license.
